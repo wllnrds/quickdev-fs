@@ -1,0 +1,31 @@
+# Todo
+
+- [ ] Alterar Readme
+    - [ ] stack utilizada
+    - [ ] versões de cada coisa usada
+    - [ ] frameworks
+    - [ ] motivo de cada decisão
+- [ ] Criar entidades
+    - [ ] User
+    - [ ] Post
+    - [ ] Comment
+- [ ] Autenticação
+- [ ] Usuário
+    - [ ] Criar usuário
+    - [ ] Alterar perfil (nome)
+    - [ ] Pegar usuário
+- [ ] Postagens
+    - [ ] Criar post
+    - [ ] Listar posts
+    - [ ] Editar posts
+    - [ ] Ver post
+    - [ ] Registrar visita
+    - [ ] Curtir/Não curti post
+- [ ] Comentários
+    - [ ] Criar comentário
+    - [ ] Editar comentário (dono do comentário)
+    - [ ] Remover comentário (dono do comentário)
+    - [ ] Desativar comentário (dono da postagem)
+    - [ ] Avisar que recebeu comentário
+    - [ ] Mostrar comentário removido pelo autor do post
+- [ ] Relatório do post (autor)
