@@ -1,0 +1,25 @@
+name: quik-blog
+services:
+  database: 
+    container_name: quik-pg-database
+    user: postgres
+    image: postgres
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=quik-blog
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234Abc!
+    expose:
+      - 5432
+    ports:
+      - 54132:5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+volumes:
+  db-data:
+    name: "quik-database"
