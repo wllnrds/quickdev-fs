@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id            Int         @id @default(autoincrement())
+  name          String
+  email         String      @unique
+  password      String
+
+  created_at    DateTime    @default(now())
+  updated_at    DateTime    @updatedAt
+
+  posts         Post[]
+  comments      Comment[]
+}
+
+model Post{
+  id            Int         @id @default(autoincrement())
+  title         String
+  text          String
+
+  created_at    DateTime    @default(now())
+  updated_at    DateTime    @updatedAt
+
+  user_id       Int
+  user          User        @relation(fields: [user_id], references: [id])
+
+  comments      Comment[]
+  visits        PostVisit?
+}
+
+model PostVisit{
+  id            Int         @id @default(autoincrement())
+  counter       Int         @default(0)
+  updated_at    DateTime    @updatedAt
+
+  post_id       Int         @unique
+  
+  post          Post        @relation(fields: [post_id], references: [id], onDelete: Cascade)
+}
+
+model Comment{
+  id            Int         @id @default(autoincrement())
+  description   String
+
+  created_at    DateTime    @default(now())
+  updated_at    DateTime    @updatedAt
+
+  disabled      Boolean     @default(false)
+
+  user_id       Int
+  post_id       Int
+
+  user          User        @relation(fields: [user_id], references: [id])
+  post          Post        @relation(fields: [post_id], references: [id])
+}
+
+model reaction{
+  id            Int         @id @default(autoincrement())
+  user_id       Int
+  post_id       Int
+  reaction      Reaction
+  created_at    DateTime    @default(now())
+
+  @@index([user_id,post_id])
+}
+
+enum Reaction{
+  LIKE
+  DISLIKE
+}

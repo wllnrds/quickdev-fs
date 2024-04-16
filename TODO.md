@@ -5,10 +5,10 @@
     - [ ] versões de cada coisa usada
     - [ ] frameworks
     - [ ] motivo de cada decisão
-- [ ] Criar entidades
-    - [ ] User
-    - [ ] Post
-    - [ ] Comment
+- [x] Criar entidades
+    - [x] User
+    - [x] Post
+    - [x] Comment
 - [ ] Autenticação
 - [ ] Usuário
     - [ ] Criar usuário
