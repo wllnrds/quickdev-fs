@@ -11,7 +11,7 @@ export async function Sign() {
 
   if( session ){
     return <div className="flex flex-row gap-4">
-      <div>Oi <strong>{ session.user?.name }</strong></div>
+      <div>Oi <Link href="/auth/perfil"><strong>{ session.user?.name }</strong></Link></div>
       <form action={ handleSignOut } >
         <button type="submit">Sair</button>
       </form>

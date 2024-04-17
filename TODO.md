@@ -12,8 +12,8 @@
 - [x] Autenticação
 - [ ] Usuário
     - [x] Criar usuário
-    - [ ] Alterar perfil (nome)
-    - [ ] Pegar usuário
+    - [x] Alterar perfil (nome)
+    - [x] Pegar usuário
 - [ ] Postagens
     - [ ] Criar post
     - [ ] Listar posts

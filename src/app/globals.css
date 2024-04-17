@@ -10,9 +10,13 @@
 
 
 .input-styled{
-  @apply px-4 py-2 rounded-xl leading-none border-none text-base outline-none;
+  @apply px-4 py-2 rounded-xl leading-none text-base outline-none;
+}
+
+.input-styled.outlined{
+  @apply border;
 }
 
 .button-styled{
-  @apply px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white leading-none border-none text-base;
+  @apply px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white leading-none border-0 text-base;
 }
