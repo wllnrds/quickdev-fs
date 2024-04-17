@@ -9,9 +9,9 @@
     - [x] User
     - [x] Post
     - [x] Comment
-- [ ] Autenticação
+- [x] Autenticação
 - [ ] Usuário
-    - [ ] Criar usuário
+    - [x] Criar usuário
     - [ ] Alterar perfil (nome)
     - [ ] Pegar usuário
 - [ ] Postagens

@@ -9,7 +9,8 @@ type mailData = {
 export function generateMail( data : mailData ){
     return {
         text: text( data ),
-        html: html( data )
+        html: html( data ),
+        subject: "Você recebeu um novo comentário"
     }
 }
 

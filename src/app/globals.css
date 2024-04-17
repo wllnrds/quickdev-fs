@@ -7,3 +7,12 @@
     text-wrap: balance;
   }
 }
+
+
+.input-styled{
+  @apply px-4 py-2 rounded-xl leading-none border-none text-base outline-none;
+}
+
+.button-styled{
+  @apply px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white leading-none border-none text-base;
+}
