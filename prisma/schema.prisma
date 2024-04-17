@@ -58,6 +58,7 @@ model Comment{
   created_at    DateTime    @default(now())
   updated_at    DateTime    @updatedAt
 
+  deleted       Boolean     @default(false)
   disabled      Boolean     @default(false)
 
   user_id       Int
