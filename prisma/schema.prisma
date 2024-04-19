@@ -26,8 +26,11 @@ model Post{
   title         String
   text          String
 
+
   created_at    DateTime    @default(now())
+  published_at  DateTime?
   updated_at    DateTime    @updatedAt
+  deleted_at    DateTime?
 
   user_id       Int
   user          User        @relation(fields: [user_id], references: [id])
@@ -36,6 +39,23 @@ model Post{
   reactions     Reaction[]
 
   visit         PostVisit?
+
+  history       PostHistory[] @relation("History")
+}
+
+model PostHistory{
+  id            Int         @id @default(autoincrement())
+
+  old_title     String
+  new_title     String
+
+  old_text      String
+  new_text      String
+
+  timestamp     DateTime    @default(now())
+
+  post_id       Int
+  post          Post?       @relation("History", fields: [post_id], references: [id])
 }
 
 model PostVisit{
