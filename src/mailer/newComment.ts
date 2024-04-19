@@ -6,7 +6,7 @@ type mailData = {
     commentId : string
 }
 
-export function generateMail( data : mailData ){
+export default function generateMail( data : mailData ){
     return {
         text: text( data ),
         html: html( data ),

@@ -10,22 +10,23 @@
     - [x] Post
     - [x] Comment
 - [x] Autenticação
-- [ ] Usuário
+- [x] Usuário
     - [x] Criar usuário
     - [x] Alterar perfil (nome)
     - [x] Pegar usuário
-- [ ] Postagens
-    - [ ] Criar post
-    - [ ] Listar posts
-    - [ ] Editar posts
-    - [ ] Ver post
-    - [ ] Registrar visita
-    - [ ] Curtir/Não curti post
-- [ ] Comentários
-    - [ ] Criar comentário
-    - [ ] Editar comentário (dono do comentário)
-    - [ ] Remover comentário (dono do comentário)
-    - [ ] Desativar comentário (dono da postagem)
-    - [ ] Avisar que recebeu comentário
-    - [ ] Mostrar comentário removido pelo autor do post
+- [x] Postagens
+    - [x] Criar post
+    - [x] Listar posts
+    - [x] Editar posts
+    - [x] Ver post
+    - [x] Registrar visita
+    - [x] Listar comentários em post
+    - [x] Curtir/Não curti post
+- [x] Comentários
+    - [x] Criar comentário
+    - [x] Editar comentário (dono do comentário)
+    - [x] Remover comentário (dono do comentário)
+    - [x] Desativar comentário (dono da postagem)
+    - [x] Avisar que recebeu comentário
+    - [x] Mostrar comentário removido pelo autor do post
 - [ ] Relatório do post (autor)

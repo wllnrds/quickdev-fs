@@ -13,6 +13,8 @@ async function createUser( data : { name: string, email: string, password: strin
         })
         return user;
     } catch (error) {
+
+        console.log( error )
         return {
             error: {
                 message: "Falha ao criar usuário."
@@ -21,10 +23,11 @@ async function createUser( data : { name: string, email: string, password: strin
     }
 }
 
-async function updateUser( data : { name: string, email: string }){
+async function updateUser( data : { id: number , name: string, email: string }){
     try {
         const user = await Prisma.user.update({
             where: {
+                id: data.id,
                 email: data.email
             },
             data: {

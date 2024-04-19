@@ -32,19 +32,23 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     maxAge: 30 * 24 * 60 * 60,
   },
   callbacks:{
-    async jwt({ token, user, trigger, session }){
+    async jwt({ token, user, trigger, session } ){
       if( user ){
-        token.user = user
+        token.id = user.id
+        token.name = user.name
       }
 
       if( trigger === 'update' && session ){
         token.name = session.name
+        token.id = session.id
       }
 
       return token;
     },
     async session({ session, token }){
       session.user.name = token.name
+      session.user.id = `${ token.id }`
+
       return session
     }
   }

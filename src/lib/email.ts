@@ -1,6 +1,11 @@
 import { createTransport } from 'nodemailer'
 
-export async function sendMail( data : any ){
+export async function sendMail( data :{
+    to: string,
+    subject: string,
+    text: any,
+    html: any
+}){
     if(!process.env.EMAIL_SERVER_HOST){
         throw new Error("Missing email host config as EMAIL_SERVER_HOST")
     }

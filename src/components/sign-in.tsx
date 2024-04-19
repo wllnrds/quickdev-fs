@@ -1,7 +1,7 @@
 import { auth, signIn } from "@/lib/auth"
 import { redirect } from 'next/navigation';
  
-export async function SignIn() {
+export async function SignIn({ callback } : { callback : any }) {
   const session = await auth()
 
   async function handleSignIn( formData : FormData ){
@@ -11,7 +11,11 @@ export async function SignIn() {
   }
 
   function returnHome(){
-    return redirect("/")
+    if( callback ){
+      return redirect(callback)
+    }else{
+      return redirect("/")
+    }
   }
 
   if( session ){
